@@ -1,330 +1,205 @@
-````markdown
-# 🌟 HabitPulse — Premium Habit Intelligence Platform
+# HabitPulse
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" />
-  <img src="https://img.shields.io/badge/TypeScript-Advanced-blue?style=for-the-badge&logo=typescript" />
-  <img src="https://img.shields.io/badge/Vite-Fast-purple?style=for-the-badge&logo=vite" />
-  <img src="https://img.shields.io/badge/Supabase-Backend-green?style=for-the-badge&logo=supabase" />
-  <img src="https://img.shields.io/badge/TailwindCSS-Styled-38B2AC?style=for-the-badge&logo=tailwindcss" />
-</p>
+HabitPulse is a premium habit tracker built with React, TypeScript, and Supabase-ready services. It focuses on behavioral insights instead of simple streak counting, helping users understand which habits are stable, which are slipping, and what action to take next.
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9FF,100:92FE9D&height=220&section=header&text=HabitPulse&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Track%20Habits.%20Analyze%20Behavior.%20Transform%20Life.&descAlignY=55&descSize=20"/>
-</p>
+## Problem Statement
 
----
+Most habit trackers stop at checkmarks. Students and young professionals often know whether they completed a habit, but they do not know why consistency drops, which routines are at risk, or when their habits work best.
 
-## 🚀 Overview
+HabitPulse solves this by combining:
 
-> **HabitPulse** is a next-generation premium habit tracker built with **React + TypeScript + Supabase**, designed not just to count streaks — but to **understand behavior patterns**, predict slippage, and optimize routines using smart analytics. :contentReference[oaicite:0]{index=0}
+- Daily habit execution with completion, miss, and skip states
+- Context capture through note, mood, and energy inputs
+- Behavioral analytics like 7-day consistency, 30-day consistency, streaks, momentum, best completion window, and at-risk detection
 
-🎯 Perfect for:
+Why it matters:
 
-- 🎓 Students managing academics & goals  
-- 💼 Young professionals building discipline  
-- 🧠 Productivity enthusiasts  
-- 🌱 Anyone serious about self-growth  
+- Better feedback loops create better routines
+- Small behavior adjustments are easier than forcing motivation
+- Insight-led tracking helps users recover faster when consistency breaks
 
----
+## Target User
 
-# 🧠 Why HabitPulse?
+- College students balancing classes, projects, and personal routines
+- Young professionals building focus, wellness, and productivity systems
+- Anyone who wants more than a basic checklist habit app
 
-Most habit apps stop at ✔️ checkmarks.
+## Features
 
-HabitPulse goes further:
+- Authentication with Supabase-ready auth service
+- Protected routes for authenticated pages
+- Onboarding flow with starter habit packs
+- Dashboard with:
+  - Today Pulse summary
+  - Quick-complete habit queue
+  - Coaching cards
+  - Consistency chart
+  - Activity heatmap
+- Habit Studio:
+  - Create habits
+  - Edit habits
+  - Archive habits
+  - Delete habits
+  - Log daily completion context
+- Insights page:
+  - Completion trend chart
+  - Category performance bar chart
+  - Habit leaderboard
+  - Rule-based coaching cards
+- Journal page for daily reflections
+- Settings page for profile editing and backend readiness
+- Demo fallback mode when Supabase env vars are not present
 
-✅ Detects habits at risk  
-✅ Measures momentum  
-✅ Shows best completion time  
-✅ Gives coaching suggestions  
-✅ Tracks mood + energy context  
-✅ Helps recover faster after setbacks
+## React Concepts Demonstrated
 
----
+- Functional components
+- Props and component composition
+- `useState`
+- `useEffect`
+- Conditional rendering
+- Lists and keys
+- Lifting state up
+- Controlled components
+- React Router
+- Context API
+- `useMemo`
+- `useDeferredValue`
+- `useRef`
+- `React.lazy` and `Suspense`
 
-# 🎨 Premium UI Preview
+## Tech Stack
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/female/68.png" width="140"/>
-<img src="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/45.png" width="140"/>
-<img src="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/22.png" width="140"/>
-</p>
+- React 19
+- TypeScript
+- Vite
+- React Router
+- Supabase
+- Tailwind CSS
+- Framer Motion
+- Recharts
+- date-fns
+- Lucide React
+- Vitest
 
----
+## Project Structure
 
-# ✨ Core Features
-
-## 📊 Dashboard Intelligence
-
-- Today Pulse Summary  
-- Quick Complete Queue  
-- Coaching Cards  
-- Consistency Graphs  
-- Heatmaps  
-- Momentum Analysis
-
-## 🛠 Habit Studio
-
-- ➕ Create Habits  
-- ✏️ Edit Habits  
-- 🗃 Archive Habits  
-- ❌ Delete Habits  
-- 📝 Daily Logs
-
-## 📈 Insights Engine
-
-- Completion Trend Charts  
-- Category Performance  
-- Habit Leaderboards  
-- Smart Recommendations
-
-## 📓 Reflection Journal
-
-- Daily thoughts  
-- Progress notes  
-- Emotional patterns
-
-## 🔐 Authentication
-
-- Supabase Auth Ready  
-- Protected Routes  
-- Email Confirmation Flow
-
----
-
-# 🧩 Tech Stack
-
-| Frontend | Backend | Styling | Charts | Animation |
-|--------|--------|--------|--------|----------|
-| React 19 | Supabase | Tailwind CSS | Recharts | Framer Motion |
-| TypeScript | PostgreSQL | Responsive UI | Insights Graphs | Smooth UX |
-
----
-
-# 📂 Project Structure
-
-```bash
+```text
 src/
- ┣ 📁 components
- ┣ 📁 constants
- ┣ 📁 context
- ┣ 📁 hooks
- ┣ 📁 layouts
- ┣ 📁 lib
- ┣ 📁 pages
- ┣ 📁 services
- ┣ 📁 types
-````
-
-
-
----
-
-# ⚙️ Installation
-
-## 📥 Clone Repository
-
-```bash
-git clone https://github.com/yourusername/habitpulse.git
-cd habitpulse
+  components/
+  constants/
+  context/
+  hooks/
+  layouts/
+  lib/
+  pages/
+  services/
+  types/
 ```
 
-## 📦 Install Dependencies
+## Setup Instructions
+
+### 1. Install dependencies
 
 ```bash
 npm install
 ```
 
-## 🔐 Configure Environment
+### 2. Add environment variables
 
-Create `.env`
+Create a `.env` file based on `.env.example`.
 
 ```env
-VITE_SUPABASE_URL=your_url
-VITE_SUPABASE_ANON_KEY=your_key
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-## ▶️ Run App
+If these variables are missing, the app still works in demo fallback mode for local exploration.
+
+### 3. Configure Supabase Auth URLs
+
+In your Supabase project:
+
+- Set `Site URL` to your local or deployed frontend URL
+- Add `http://localhost:5173` to Redirect URLs for local development
+- Add your deployed Vercel or Netlify URL to Redirect URLs before going live
+
+This project supports real Supabase email confirmation flows. If email confirmation is enabled, signup creates the account and sends the user to confirm their email before signing in.
+
+### 4. Run the Supabase schema
+
+Execute the SQL from [supabase/schema.sql](./supabase/schema.sql) in the Supabase SQL editor.
+
+The schema includes:
+
+- Tables for `profiles`, `habits`, `habit_logs`, and `reflections`
+- Row Level Security policies
+- A trigger that creates a `profiles` row automatically when a new auth user is created
+
+### 5. Start development
 
 ```bash
 npm run dev
 ```
 
-## 🧪 Run Tests
+### 6. Run tests
 
 ```bash
 npm test
 ```
 
-## 🚀 Production Build
+### 7. Production build
 
 ```bash
 npm run build
 ```
 
----
+## Supabase Schema
 
-# 🔄 App Flowchart
+The project includes:
 
-```mermaid
-flowchart TD
-A[User Login] --> B[Dashboard]
-B --> C[Create Habit]
-C --> D[Daily Tracking]
-D --> E[Behavior Analytics]
-E --> F[Insights & Coaching]
-F --> G[Improved Routine]
-```
+- `profiles`
+- `habits`
+- `habit_logs`
+- `reflections`
+- Row Level Security policies for per-user access
 
----
+See [supabase/schema.sql](./supabase/schema.sql).
 
-# 🧠 HabitPulse Mindmap
+## Demo Mode
 
-```mermaid
-mindmap
-  root((HabitPulse))
-    Dashboard
-      Summary
-      Heatmap
-      Coaching
-    Habit Studio
-      Create
-      Edit
-      Archive
-    Insights
-      Trends
-      Leaderboard
-      Risk Detection
-    Journal
-      Notes
-      Reflection
-    Auth
-      Login
-      Signup
-      Security
-```
+If Supabase is not configured, HabitPulse automatically runs with a local demo account:
 
----
+- Email: `demo@habitpulse.app`
+- Password: `habitpulse-demo`
 
-# 📊 Analytics Pie Chart
+This keeps the project explorable for grading and UI review without blocking on backend secrets, while the real Supabase integration remains in the codebase.
 
-```mermaid
-pie title HabitPulse User Focus Areas
-    "Productivity" : 35
-    "Fitness" : 25
-    "Mental Wellness" : 20
-    "Study Habits" : 15
-    "Other" : 5
-```
+## Real Supabase Notes
 
----
+- Signup now supports real email-confirmation mode
+- If confirmation is required, the app does not treat the user as logged in until a real session exists
+- A database trigger creates the `profiles` row automatically for new auth users
+- If a signed-in user is missing a profile row, the app recreates it safely on first authenticated access
 
-# 📈 Performance Graph
+For a quick setup checklist, see [supabase/SETUP.md](./supabase/SETUP.md).
 
-```text
-Consistency Score
+## Deployment
 
-100 |                         ████
- 90 |                      ███████
- 80 |                  ███████████
- 70 |              ███████████████
- 60 |          ███████████████████
- 50 |      ███████████████████████
-     --------------------------------
-      Week1 Week2 Week3 Week4 Week5
-```
+Recommended deployment:
 
----
+- Vercel
+- Netlify
 
-# 🛡 Supabase Database Schema
+Make sure to add the same `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` environment variables in the deployment platform.
 
-```sql
-profiles
-habits
-habit_logs
-reflections
-```
+## Suggested Demo Video Flow
 
-✔ Row Level Security
-✔ Per-user privacy
-✔ Auto profile creation trigger
-
-
-
----
-
-# 🌐 Deployment
-
-Deploy instantly on:
-
-<p align="center">
-<img src="https://img.shields.io/badge/Vercel-Deploy-black?style=for-the-badge&logo=vercel"/>
-<img src="https://img.shields.io/badge/Netlify-Deploy-00C7B7?style=for-the-badge&logo=netlify"/>
-</p>
-
----
-
-# 🎥 Suggested Demo Flow
-
-1️⃣ Explain problem statement
-2️⃣ Login / Signup
-3️⃣ Onboarding
-4️⃣ Create habit
-5️⃣ Track progress
-6️⃣ Show analytics
-7️⃣ Journal reflection
-8️⃣ Settings + Supabase
-
-
-
----
-
-# 🏆 Highlights
-
-⭐ Advanced React Concepts
-⭐ Modern Scalable Architecture
-⭐ Beautiful Responsive Design
-⭐ Premium Dashboard UI
-⭐ Real Backend Integration
-⭐ Demo Mode Included
-
----
-
-# 👨‍💻 Developer Friendly
-
-```bash
-✔ Clean Folder Structure
-✔ Reusable Components
-✔ Type Safe Codebase
-✔ Production Ready
-✔ Easy Deployment
-```
-
----
-
-# 💎 Final Vision
-
-> HabitPulse is not just another tracker.
-> It is a **behavior intelligence engine** helping users become the best version of themselves.
-
----
-
-# 📬 Connect
-
-<p align="center">
-<a href="#"><img src="https://img.shields.io/badge/GitHub-Visit-black?style=for-the-badge&logo=github"></a>
-<a href="#"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin"></a>
-<a href="#"><img src="https://img.shields.io/badge/Portfolio-View-orange?style=for-the-badge&logo=googlechrome"></a>
-</p>
-
----
-
-<p align="center">
-✨ Crafted with passion, precision & premium engineering.
-</p>
-
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:92FE9D,100:00C9FF&height=120&section=footer"/>
-</p>
-```
+1. Explain the problem and target user.
+2. Show signup or login.
+3. Walk through onboarding.
+4. Create a habit.
+5. Edit and archive a habit.
+6. Log daily progress with note, mood, and energy.
+7. Show the dashboard and insights.
+8. Show reflections in the journal.
+9. Show settings and explain Supabase integration.
